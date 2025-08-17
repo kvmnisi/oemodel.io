@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organisational Assessment Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Organisational Assessment</h1>
+    
+    <form id="assessmentForm">
+      <!-- Question 1 -->
+      <div class="question">
+        <p>1. How does your organization respond to environmental changes?</p>
+        <label><input type="radio" name="Q1" value="Q1_A"> Quickly adapts to meet goals</label>
+        <label><input type="radio" name="Q1" value="Q1_B"> Seeks stakeholder feedback</label>
+        <label><input type="radio" name="Q1" value="Q1_C"> Focuses on internal process efficiency</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p>2. What does your HR department prioritize the most?</p>
+        <label><input type="radio" name="Q2" value="Q2_A"> Task performance and productivity</label>
+        <label><input type="radio" name="Q2" value="Q2_B"> Employee development and learning</label>
+        <label><input type="radio" name="Q2" value="Q2_C"> Rules, policies, and procedures</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p>3. What type of leadership is most common in your organization?</p>
+        <label><input type="radio" name="Q3" value="Q3_A"> Directive and goal-focused</label>
+        <label><input type="radio" name="Q3" value="Q3_B"> Supportive and collaborative</label>
+        <label><input type="radio" name="Q3" value="Q3_C"> Administrative and structured</label>
+      </div>
+
+      <button type="button" onclick="calculateResult()">Submit Assessment</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="charts">
+      <canvas id="genotypeChart"></canvas>
+      <canvas id="effectivenessChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
